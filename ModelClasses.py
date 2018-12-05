@@ -53,6 +53,8 @@ Student.supervisors = relation(Supervisor,
 							   secondary=StudentToSupervisor.__table__,
 							   backref="students")
 
+Student.city=relation(City, backref="students")
+
 # THIS IS INCOMPLETE FOR THE EXERCISE -
 # add additional required relationships here
 
