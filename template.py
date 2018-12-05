@@ -73,3 +73,14 @@ session.commit()
 
 engine.dispose() # cleanly disconnect from the database
 sys.exit(0)
+
+
+#Query this beyatch
+print()
+print("Attleboro students")
+for studen in session.query(City).filter(City.label=="Attleboro").one().students:
+  print(f"{student.first_name}{student.last_name}")
+
+clubs=session.query(Club)
+for club in clubs:
+        
